@@ -1,0 +1,14 @@
+decial  hex  chr                   name                  
+------ ----- --- ----------------------------------------
+ 10018  2722  ✢  Four Teardrop-Spoked Asterisk
+ 10019  2723  ✣  Four Balloon-Spoked Asterisk
+ 10020  2724  ✤  Heavy Four Balloon-Spoked Asterisk
+ 10021  2725  ✥  Four Club-Spoked Asterisk
+ 10035  2733  ✳  Eight Spoked Asterisk
+ 10043  273B  ✻  Teardrop-Spoked Asterisk
+ 10044  273C  ✼  Open Centre Teardrop-Spoked Asterisk
+ 10045  273D  ✽  Heavy Teardrop-Spoked Asterisk
+ 10051  2743  ❃  Heavy Teardrop-Spoked Pinwheel Asterisk
+ 10057  2749  ❉  Balloon-Spoked Asterisk
+ 10058  274A  ❊  Eight Teardrop-Spoked Propeller Asterisk
+ 10059  274B  ❋  Heavy Eight Teardrop-Spoked Propeller Asterisk
