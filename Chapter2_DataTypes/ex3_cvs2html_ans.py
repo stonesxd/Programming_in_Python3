@@ -1,4 +1,8 @@
+#Delete the escape_html() function from csv2html.py, and use the xml.sax.
+#saxutils.escape() function from the xml.sax.saxutils module instead.
+
 import sys
+import xml.sax.saxutils
 
 def print_start():
     print("<table border='1'>")
@@ -29,11 +33,12 @@ def extract_field(line):                #input a string
     return fields                       #return a list
 
 #replace spceial HTML character with the appropriate HTML entity
-def escape_html(text):
-    text = text.replace("&", "&amp;")   #must replace first
-    text = text.replace("<", "&lt;")
-    text = text.replace(">", "&gt;")
-    return text
+#def escape_html(text):
+#    text = text.replace("&", "&amp;")   #must replace first
+#    text = text.replace("<", "&lt;")
+#    text = text.replace(">", "&gt;")
+#    return text
+
 
 def print_line(line, color, maxwidth):
     print("<tr bgcolor='{0}'>".format(color))
@@ -50,9 +55,10 @@ def print_line(line, color, maxwidth):
                 field = field.title()   #string deal, str.title() 
                 field = field.replace(" And ", " and ")
                 if len(field) <= maxwidth:  #fixed the field length
-                    field = escape_html(field)
+                    field = xml.sax.saxutils.escape(field)
                 else:
-                    field = "{0} ...".format(escape_html(field[:maxwidth]))
+#                    field = "{0} ...".format(escape_html(field[:maxwidth]))
+                    field = "{0} ...".format(xml.sax.saxutils.escape(field[:maxwidth]))
                 print("<td>{0}</td>".format(field))
     print("</tr>")
                 
